@@ -159,6 +159,42 @@ properties:
   vpcie3v3aux-supply:
     description: 3.3v AUX regulator phandle for the slot
 
+  gen3-eq-presets:
+    description:
+      Contains the equalization preset values for PCIe data rates 8.0 GT/s.
+      Each preset value is used to adjust the transmitter settings to improve
+      signal quality and meet the electrical requirements.
+    $ref: /schemas/types.yaml#/definitions/uint8-array
+    minItems: 1
+    maxItems: 16
+
+  gen4-eq-presets:
+    description:
+      Contains the equalization preset values for PCIe data rates 16.0 GT/s.
+      Each preset value is used to adjust the transmitter settings to improve
+      signal quality and meet the electrical requirements.
+    $ref: /schemas/types.yaml#/definitions/uint8-array
+    minItems: 1
+    maxItems: 16
+
+  gen5-eq-presets:
+    description:
+      Contains the equalization preset values for PCIe data rates 32.0 GT/s.
+      Each preset value is used to adjust the transmitter settings to improve
+      signal quality and meet the electrical requirements.
+    $ref: /schemas/types.yaml#/definitions/uint8-array
+    minItems: 1
+    maxItems: 16
+
+  gen6-eq-presets:
+    description:
+      Contains the equalization preset values for PCIe data rates 64.0 GT/s.
+      Each preset value is used to adjust the transmitter settings to improve
+      signal quality and meet the electrical requirements.
+    $ref: /schemas/types.yaml#/definitions/uint8-array
+    minItems: 1
+    maxItems: 16
+
 patternProperties:
   "@1?[0-9a-f](,[0-7])?$":
     type: object
